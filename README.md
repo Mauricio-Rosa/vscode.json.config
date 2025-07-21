@@ -141,5 +141,16 @@
   "vscode-office.editorTheme": "One Dark",
   "database-client.autoSync": true,
   "liveServer.settings.donotVerifyTags": true //permite que abram varias abas uma ao lado da outra
+
+    "terminal.integrated.defaultProfile.windows": "Command Prompt", //define qual terminal será aberto por padrão no Windows.
+  "terminal.integrated.profiles.windows": {
+    /*define os terminais disponíveis, com caminhos para garantir compatibilidade em diferentes arquiteturas (32/64 bits).*/
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ]
+    }
+  }
 }
 
